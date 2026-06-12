@@ -20,3 +20,27 @@ Stage Summary:
 - Responsive design verified on mobile (375x812) and desktop (1920x1080)
 - Interactive features working: destination filtering, detail dialogs, trip planner tabs, contact form submission
 - No console errors or lint issues
+
+---
+Task ID: 2
+Agent: Main Developer
+Task: Fix footer text visibility, broken images, and Send Inquiry button
+
+Work Log:
+- Identified footer text was invisible due to low contrast (text-white/50 on dark bg)
+- Changed footer text colors to explicit higher-contrast values (#BDC3C7 for links, #95A5A6 for copyright)
+- Tested all Unsplash image URLs - found 5 returning 404 (Pokhara, Chitwan, Lumbini, Rafting, Wildlife Safari)
+- Replaced all broken image URLs with verified working Unsplash alternatives
+- Fixed Send Inquiry button by using explicit hex colors bg-[#C0392B] instead of bg-nepal-crimson
+- Replaced ALL custom nepal- color Tailwind classes across all 13 components with direct hex values
+  - Tailwind 4 @theme inline was not generating utility classes for custom colors properly
+  - Replaced: nepal-crimson→[#C0392B], nepal-red→[#E74C3C], nepal-slate→[#2C3E50], nepal-gold→[#F39C12], nepal-mist→[#ECF0F1], nepal-white→[#F9F7F4]
+- VLM verified: all 8 destination cards show photos, no broken images, footer text visible, Send Inquiry button visible and red
+- Verified on both mobile and desktop viewports
+
+Stage Summary:
+- Footer text now clearly visible with proper contrast
+- All destination and activity images loading correctly (5 broken URLs replaced)
+- Send Inquiry button text now visible with red background
+- All custom color classes replaced with explicit hex values for reliability
+- Lint passes, no errors

@@ -42,18 +42,18 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-nepal-slate text-white">
+    <footer className="bg-[#2C3E50] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Logo & Description */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <Mountain className="h-7 w-7 text-nepal-crimson" />
-              <span className="font-[family-name:var(--font-playfair)] text-xl font-bold">
+              <Mountain className="h-7 w-7 text-[#F39C12]" />
+              <span className="font-[family-name:var(--font-playfair)] text-xl font-bold text-white">
                 Discover Nepal
               </span>
             </div>
-            <p className="text-white/60 leading-relaxed mb-6 max-w-sm">
+            <p className="text-[#BDC3C7] leading-relaxed mb-6 max-w-sm text-sm">
               Your gateway to the Himalayas. We help travelers discover the magic
               of Nepal — from towering peaks to ancient temples and everything in
               between.
@@ -62,7 +62,7 @@ export default function Footer() {
               {socialLinks.map((social) => (
                 <button
                   key={social.label}
-                  className="w-10 h-10 bg-white/10 hover:bg-nepal-crimson rounded-full flex items-center justify-center transition-colors font-[family-name:var(--font-space-grotesk)] text-xs font-bold"
+                  className="w-10 h-10 bg-white/10 hover:bg-[#C0392B] rounded-full flex items-center justify-center transition-colors font-[family-name:var(--font-space-grotesk)] text-xs font-bold text-white hover:text-white"
                   aria-label={social.label}
                 >
                   {social.icon}
@@ -74,7 +74,7 @@ export default function Footer() {
           {/* Link Columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="font-[family-name:var(--font-space-grotesk)] font-semibold mb-4 text-white/90">
+              <h4 className="font-[family-name:var(--font-space-grotesk)] font-semibold mb-4 text-[#ECF0F1]">
                 {category}
               </h4>
               <ul className="space-y-2">
@@ -82,7 +82,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <button
                       onClick={() => handleNavClick(link.href)}
-                      className="text-white/50 hover:text-nepal-gold transition-colors text-sm font-[family-name:var(--font-space-grotesk)]"
+                      className="text-[#BDC3C7] hover:text-[#F39C12] transition-colors text-sm font-[family-name:var(--font-space-grotesk)]"
                     >
                       {link.label}
                     </button>
@@ -95,12 +95,12 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-white/40 text-sm font-[family-name:var(--font-space-grotesk)]">
+          <p className="text-[#95A5A6] text-sm font-[family-name:var(--font-space-grotesk)]">
             © {new Date().getFullYear()} Discover Nepal. All rights reserved.
           </p>
-          <p className="text-white/40 text-sm font-[family-name:var(--font-space-grotesk)]">
+          <p className="text-[#95A5A6] text-sm font-[family-name:var(--font-space-grotesk)]">
             Made with ❤️ in Nepal
           </p>
         </div>

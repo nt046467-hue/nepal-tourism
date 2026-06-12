@@ -56,7 +56,7 @@ export const activities: Activity[] = [
       "Nepal's rivers, fed by Himalayan glaciers, offer some of the finest white water rafting on the planet. From the gentle Class II rapids of the Trishuli (perfect for beginners) to the intense Class V drops of the Bhote Koshi and Sun Koshi, there's a river for every thrill level. Multi-day expeditions on the Sun Koshi (270 km) combine camping on white-sand beaches with world-class rapids.",
     difficulty: "Moderate",
     bestSeason: "Sep–Dec, Mar–May",
-    image: "https://images.unsplash.com/photo-1530866495561-507c83e5a88e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80",
     highlights: ["Trishuli River", "Bhote Koshi", "Sun Koshi", "Karnali River"],
   },
   {
@@ -68,7 +68,7 @@ export const activities: Activity[] = [
       "Nepal's southern lowlands hide a completely different world from the mountains. Chitwan and Bardia National Parks are home to the greater one-horned rhinoceros, Bengal tiger, Asian elephant, gharial crocodile, and over 900 bird species. Jeep safaris, canoe rides, and guided jungle walks bring you thrillingly close to wildlife in their natural habitat.",
     difficulty: "Easy",
     bestSeason: "Oct–Mar",
-    image: "https://images.unsplash.com/photo-1534759203476-306cf6a8450e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?w=800&q=80",
     highlights: ["Chitwan NP", "Bardia NP", "Rhino Spotting", "Bird Watching"],
   },
   {

@@ -45,7 +45,7 @@ function StatCounter({ value, suffix, label }: StatProps) {
       transition={{ duration: 0.6 }}
       className="text-center"
     >
-      <div className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl font-black text-nepal-crimson">
+      <div className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl font-black text-[#C0392B]">
         {count}
         {suffix}
       </div>
@@ -67,7 +67,7 @@ export default function StatsSection() {
   return (
     <section
       id="stats"
-      className="relative py-16 sm:py-20 bg-white border-y border-nepal-mist"
+      className="relative py-16 sm:py-20 bg-white border-y border-[#ECF0F1]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">

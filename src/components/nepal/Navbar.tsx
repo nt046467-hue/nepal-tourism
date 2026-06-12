@@ -40,7 +40,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-nepal-mist"
+          ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-[#ECF0F1]"
           : "bg-transparent"
       }`}
     >
@@ -50,10 +50,10 @@ export default function Navbar() {
           <button
             onClick={() => handleNavClick("#hero")}
             className={`flex items-center gap-2 transition-colors ${
-              isScrolled ? "text-nepal-slate" : "text-white"
+              isScrolled ? "text-[#2C3E50]" : "text-white"
             }`}
           >
-            <Mountain className="h-7 w-7 text-nepal-crimson" />
+            <Mountain className="h-7 w-7 text-[#C0392B]" />
             <span className="font-[family-name:var(--font-playfair)] text-xl font-bold">
               Discover Nepal
             </span>
@@ -65,9 +65,9 @@ export default function Navbar() {
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className={`px-4 py-2 rounded-full font-[family-name:var(--font-space-grotesk)] text-sm font-medium transition-all duration-300 hover:bg-nepal-crimson/10 ${
+                className={`px-4 py-2 rounded-full font-[family-name:var(--font-space-grotesk)] text-sm font-medium transition-all duration-300 hover:bg-[#C0392B]/10 ${
                   isScrolled
-                    ? "text-nepal-slate hover:text-nepal-crimson"
+                    ? "text-[#2C3E50] hover:text-[#C0392B]"
                     : "text-white/90 hover:text-white hover:bg-white/10"
                 }`}
               >
@@ -76,7 +76,7 @@ export default function Navbar() {
             ))}
             <Button
               onClick={() => handleNavClick("#plan")}
-              className="ml-3 bg-nepal-crimson hover:bg-nepal-red text-white font-[family-name:var(--font-space-grotesk)] rounded-full px-6"
+              className="ml-3 bg-[#C0392B] hover:bg-[#E74C3C] text-white font-[family-name:var(--font-space-grotesk)] rounded-full px-6"
             >
               Plan Your Trip
             </Button>
@@ -86,7 +86,7 @@ export default function Navbar() {
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             className={`md:hidden p-2 rounded-lg transition-colors ${
-              isScrolled ? "text-nepal-slate" : "text-white"
+              isScrolled ? "text-[#2C3E50]" : "text-white"
             }`}
           >
             {isMobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -106,14 +106,14 @@ export default function Navbar() {
           >
             <div className="flex items-center justify-between px-4 h-16">
               <div className="flex items-center gap-2">
-                <Mountain className="h-7 w-7 text-nepal-crimson" />
-                <span className="font-[family-name:var(--font-playfair)] text-xl font-bold text-nepal-slate">
+                <Mountain className="h-7 w-7 text-[#C0392B]" />
+                <span className="font-[family-name:var(--font-playfair)] text-xl font-bold text-[#2C3E50]">
                   Discover Nepal
                 </span>
               </div>
               <button
                 onClick={() => setIsMobileOpen(false)}
-                className="p-2 text-nepal-slate"
+                className="p-2 text-[#2C3E50]"
               >
                 <X className="h-6 w-6" />
               </button>
@@ -126,14 +126,14 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   onClick={() => handleNavClick(link.href)}
-                  className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-nepal-slate hover:text-nepal-crimson transition-colors"
+                  className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-[#2C3E50] hover:text-[#C0392B] transition-colors"
                 >
                   {link.label}
                 </motion.button>
               ))}
               <Button
                 onClick={() => handleNavClick("#plan")}
-                className="mt-4 bg-nepal-crimson hover:bg-nepal-red text-white font-[family-name:var(--font-space-grotesk)] rounded-full px-8 py-3 text-lg"
+                className="mt-4 bg-[#C0392B] hover:bg-[#E74C3C] text-white font-[family-name:var(--font-space-grotesk)] rounded-full px-8 py-3 text-lg"
               >
                 Plan Your Trip
               </Button>

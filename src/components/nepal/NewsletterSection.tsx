@@ -35,7 +35,7 @@ export default function NewsletterSection() {
   };
 
   return (
-    <section className="relative py-20 sm:py-24 bg-nepal-crimson overflow-hidden">
+    <section className="relative py-20 sm:py-24 bg-[#C0392B] overflow-hidden">
       {/* Decorative pattern */}
       <div className="absolute inset-0 opacity-10">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -91,7 +91,7 @@ export default function NewsletterSection() {
               <Button
                 type="submit"
                 disabled={isLoading}
-                className="bg-white text-nepal-crimson hover:bg-white/90 font-[family-name:var(--font-space-grotesk)] rounded-full px-8 h-12 shadow-lg"
+                className="bg-white text-[#C0392B] hover:bg-white/90 font-[family-name:var(--font-space-grotesk)] rounded-full px-8 h-12 shadow-lg"
               >
                 {isLoading ? "Subscribing..." : "Subscribe"}
               </Button>

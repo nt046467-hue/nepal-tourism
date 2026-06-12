@@ -23,10 +23,10 @@ export function BestTimeSection() {
           transition={{ duration: 0.7 }}
           className="text-center mb-14"
         >
-          <Badge className="bg-nepal-gold/10 text-nepal-gold hover:bg-nepal-gold/20 font-[family-name:var(--font-space-grotesk)] mb-4">
+          <Badge className="bg-[#F39C12]/10 text-[#F39C12] hover:bg-[#F39C12]/20 font-[family-name:var(--font-space-grotesk)] mb-4">
             Plan Ahead
           </Badge>
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold text-nepal-slate">
+          <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold text-[#2C3E50]">
             Best Time to Visit
           </h2>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto text-lg">
@@ -47,12 +47,12 @@ export function BestTimeSection() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative rounded-2xl p-6 border-2 transition-all duration-300 ${
                   season.isPeak
-                    ? "border-nepal-crimson bg-nepal-crimson/5 shadow-lg shadow-nepal-crimson/10"
-                    : "border-nepal-mist bg-white"
+                    ? "border-[#C0392B] bg-[#C0392B]/5 shadow-lg shadow-[#C0392B]/10"
+                    : "border-[#ECF0F1] bg-white"
                 }`}
               >
                 {season.isPeak && (
-                  <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-nepal-crimson text-white font-[family-name:var(--font-space-grotesk)] text-[10px] px-3">
+                  <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#C0392B] text-white font-[family-name:var(--font-space-grotesk)] text-[10px] px-3">
                     Peak Season
                   </Badge>
                 )}
@@ -62,7 +62,7 @@ export function BestTimeSection() {
                 >
                   <Icon className="h-6 w-6" style={{ color: season.color }} />
                 </div>
-                <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-nepal-slate">
+                <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-[#2C3E50]">
                   {season.name}
                 </h3>
                 <p className="font-[family-name:var(--font-space-grotesk)] text-xs text-muted-foreground mt-1">
@@ -75,13 +75,13 @@ export function BestTimeSection() {
                   {season.activities.map((act) => (
                     <div
                       key={act}
-                      className="text-xs font-[family-name:var(--font-space-grotesk)] text-nepal-slate"
+                      className="text-xs font-[family-name:var(--font-space-grotesk)] text-[#2C3E50]"
                     >
                       • {act}
                     </div>
                   ))}
                 </div>
-                <div className="mt-3 pt-3 border-t border-nepal-mist">
+                <div className="mt-3 pt-3 border-t border-[#ECF0F1]">
                   <span className="font-[family-name:var(--font-space-grotesk)] text-xs text-muted-foreground">
                     🌡️ {season.temperature}
                   </span>

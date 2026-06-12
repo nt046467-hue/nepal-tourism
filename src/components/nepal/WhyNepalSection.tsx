@@ -10,16 +10,16 @@ const whyNepal = [
     title: "Natural Wonders",
     description:
       "8 of the world's 14 highest peaks, including Sagarmatha (Everest) at 8,848m — the highest point on Earth. From subtropical jungles to alpine meadows, Nepal packs more elevation change into 147,181 km² than any country on the planet.",
-    color: "text-nepal-crimson",
-    bgColor: "bg-nepal-crimson/10",
+    color: "text-[#C0392B]",
+    bgColor: "bg-[#C0392B]/10",
   },
   {
     icon: Users,
     title: "Cultural Richness",
     description:
       "125 ethnic groups speaking 123 languages, living alongside Hindu temples, Buddhist stupas, and animist shrines. Nepal's cultural tapestry is as dramatic as its topography — a living mosaic of traditions dating back millennia.",
-    color: "text-nepal-gold",
-    bgColor: "bg-nepal-gold/10",
+    color: "text-[#F39C12]",
+    bgColor: "bg-[#F39C12]/10",
   },
   {
     icon: DollarSign,
@@ -33,7 +33,7 @@ const whyNepal = [
 
 export function WhyNepalSection() {
   return (
-    <section className="py-20 sm:py-28 bg-nepal-white topo-pattern">
+    <section className="py-20 sm:py-28 bg-[#F9F7F4] topo-pattern">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -42,10 +42,10 @@ export function WhyNepalSection() {
           transition={{ duration: 0.7 }}
           className="text-center mb-14"
         >
-          <Badge className="bg-nepal-crimson/10 text-nepal-crimson hover:bg-nepal-crimson/20 font-[family-name:var(--font-space-grotesk)] mb-4">
+          <Badge className="bg-[#C0392B]/10 text-[#C0392B] hover:bg-[#C0392B]/20 font-[family-name:var(--font-space-grotesk)] mb-4">
             Why Nepal
           </Badge>
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold text-nepal-slate">
+          <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold text-[#2C3E50]">
             Why Choose Nepal?
           </h2>
         </motion.div>
@@ -58,14 +58,14 @@ export function WhyNepalSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="bg-white rounded-2xl p-8 shadow-sm border border-nepal-mist/50 hover:shadow-lg transition-shadow duration-300 text-center"
+              className="bg-white rounded-2xl p-8 shadow-sm border border-[#ECF0F1]/50 hover:shadow-lg transition-shadow duration-300 text-center"
             >
               <div
                 className={`${item.bgColor} w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6`}
               >
                 <item.icon className={`h-8 w-8 ${item.color}`} />
               </div>
-              <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-nepal-slate mb-3">
+              <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-[#2C3E50] mb-3">
                 {item.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed text-sm">

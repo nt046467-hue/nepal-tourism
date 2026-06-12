@@ -116,7 +116,7 @@ export default function ParallaxHero() {
         >
           Where the World
           <br />
-          <span className="text-nepal-gold">Meets the Sky</span>
+          <span className="text-[#F39C12]">Meets the Sky</span>
         </motion.h1>
 
         <motion.p
@@ -140,7 +140,7 @@ export default function ParallaxHero() {
               if (el) el.scrollIntoView({ behavior: "smooth" });
             }}
             size="lg"
-            className="bg-nepal-crimson hover:bg-nepal-red text-white font-[family-name:var(--font-space-grotesk)] rounded-full px-8 py-6 text-lg shadow-lg shadow-nepal-crimson/30 transition-all hover:shadow-xl hover:shadow-nepal-crimson/40"
+            className="bg-[#C0392B] hover:bg-[#E74C3C] text-white font-[family-name:var(--font-space-grotesk)] rounded-full px-8 py-6 text-lg shadow-lg shadow-[#C0392B]/30 transition-all hover:shadow-xl hover:shadow-[#C0392B]/40"
           >
             Explore Destinations
           </Button>

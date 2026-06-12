@@ -130,10 +130,10 @@ export default function ContactSection() {
           transition={{ duration: 0.7 }}
           className="text-center mb-14"
         >
-          <Badge className="bg-nepal-crimson/10 text-nepal-crimson hover:bg-nepal-crimson/20 font-[family-name:var(--font-space-grotesk)] mb-4">
+          <Badge className="bg-[#C0392B]/10 text-[#C0392B] hover:bg-[#C0392B]/20 font-[family-name:var(--font-space-grotesk)] mb-4">
             Get in Touch
           </Badge>
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold text-nepal-slate">
+          <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold text-[#2C3E50]">
             Contact Us
           </h2>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto text-lg">
@@ -157,7 +157,7 @@ export default function ContactSection() {
                 className="bg-green-50 border border-green-200 rounded-2xl p-10 text-center"
               >
                 <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-                <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-nepal-slate mb-2">
+                <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-[#2C3E50] mb-2">
                   Message Sent!
                 </h3>
                 <p className="text-muted-foreground">
@@ -165,7 +165,7 @@ export default function ContactSection() {
                 </p>
               </motion.div>
             ) : (
-              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-nepal-mist/50">
+              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-[#ECF0F1]/50">
                 <Form {...form}>
                   <form
                     onSubmit={form.handleSubmit(onSubmit)}
@@ -299,7 +299,7 @@ export default function ContactSection() {
                       type="submit"
                       disabled={isSubmitting}
                       size="lg"
-                      className="w-full sm:w-auto bg-nepal-crimson hover:bg-nepal-red text-white font-[family-name:var(--font-space-grotesk)] rounded-full px-8 shadow-lg shadow-nepal-crimson/20"
+                      className="w-full sm:w-auto bg-[#C0392B] hover:bg-[#E74C3C] text-white font-[family-name:var(--font-space-grotesk)] rounded-full px-8 py-3 shadow-lg text-base font-semibold"
                     >
                       {isSubmitting ? (
                         "Sending..."
@@ -324,14 +324,14 @@ export default function ContactSection() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="space-y-6"
           >
-            <div className="bg-nepal-mist/30 rounded-2xl p-6 border border-nepal-mist/50">
+            <div className="bg-[#ECF0F1]/30 rounded-2xl p-6 border border-[#ECF0F1]/50">
               <div className="space-y-5">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-nepal-crimson/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-5 w-5 text-nepal-crimson" />
+                  <div className="w-10 h-10 bg-[#C0392B]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Mail className="h-5 w-5 text-[#C0392B]" />
                   </div>
                   <div>
-                    <div className="font-[family-name:var(--font-space-grotesk)] font-semibold text-nepal-slate text-sm">
+                    <div className="font-[family-name:var(--font-space-grotesk)] font-semibold text-[#2C3E50] text-sm">
                       Email
                     </div>
                     <div className="text-sm text-muted-foreground">
@@ -341,11 +341,11 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-nepal-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MessageCircle className="h-5 w-5 text-nepal-gold" />
+                  <div className="w-10 h-10 bg-[#F39C12]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MessageCircle className="h-5 w-5 text-[#F39C12]" />
                   </div>
                   <div>
-                    <div className="font-[family-name:var(--font-space-grotesk)] font-semibold text-nepal-slate text-sm">
+                    <div className="font-[family-name:var(--font-space-grotesk)] font-semibold text-[#2C3E50] text-sm">
                       WhatsApp
                     </div>
                     <div className="text-sm text-muted-foreground">
@@ -359,7 +359,7 @@ export default function ContactSection() {
                     <Clock className="h-5 w-5 text-green-600" />
                   </div>
                   <div>
-                    <div className="font-[family-name:var(--font-space-grotesk)] font-semibold text-nepal-slate text-sm">
+                    <div className="font-[family-name:var(--font-space-grotesk)] font-semibold text-[#2C3E50] text-sm">
                       Office Hours
                     </div>
                     <div className="text-sm text-muted-foreground">
@@ -375,7 +375,7 @@ export default function ContactSection() {
                     <Phone className="h-5 w-5 text-blue-600" />
                   </div>
                   <div>
-                    <div className="font-[family-name:var(--font-space-grotesk)] font-semibold text-nepal-slate text-sm">
+                    <div className="font-[family-name:var(--font-space-grotesk)] font-semibold text-[#2C3E50] text-sm">
                       Nepal Tourism Board
                     </div>
                     <div className="text-sm text-muted-foreground">
@@ -387,7 +387,7 @@ export default function ContactSection() {
             </div>
 
             {/* Embedded Map */}
-            <div className="rounded-2xl overflow-hidden border border-nepal-mist/50 shadow-sm">
+            <div className="rounded-2xl overflow-hidden border border-[#ECF0F1]/50 shadow-sm">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56516.27654925898!2d85.2964!3d27.7172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19aed3f1e27b%3A0x44c49f0e8b6e1f3!2sKathmandu%2C%20Nepal!5e0!3m2!1sen!2snp!4v1700000000000!5m2!1sen!2snp"
                 width="100%"

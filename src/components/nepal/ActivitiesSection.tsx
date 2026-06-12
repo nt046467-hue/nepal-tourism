@@ -22,10 +22,10 @@ export default function ActivitiesSection() {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <Badge className="bg-nepal-gold/10 text-nepal-gold hover:bg-nepal-gold/20 font-[family-name:var(--font-space-grotesk)] mb-4">
+          <Badge className="bg-[#F39C12]/10 text-[#F39C12] hover:bg-[#F39C12]/20 font-[family-name:var(--font-space-grotesk)] mb-4">
             Adventure Awaits
           </Badge>
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold text-nepal-slate">
+          <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold text-[#2C3E50]">
             Top Activities
           </h2>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto text-lg">
@@ -64,7 +64,7 @@ export default function ActivitiesSection() {
 
               {/* Content */}
               <div className="w-full md:w-1/2 space-y-4">
-                <h3 className="font-[family-name:var(--font-playfair)] text-2xl sm:text-3xl font-bold text-nepal-slate">
+                <h3 className="font-[family-name:var(--font-playfair)] text-2xl sm:text-3xl font-bold text-[#2C3E50]">
                   {activity.name}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -78,7 +78,7 @@ export default function ActivitiesSection() {
                   </Badge>
                   <Badge
                     variant="secondary"
-                    className="font-[family-name:var(--font-space-grotesk)] text-xs bg-nepal-mist"
+                    className="font-[family-name:var(--font-space-grotesk)] text-xs bg-[#ECF0F1]"
                   >
                     Best: {activity.bestSeason}
                   </Badge>
@@ -88,7 +88,7 @@ export default function ActivitiesSection() {
                     <Badge
                       key={highlight}
                       variant="outline"
-                      className="text-xs font-[family-name:var(--font-space-grotesk)] border-nepal-crimson/20 text-nepal-slate"
+                      className="text-xs font-[family-name:var(--font-space-grotesk)] border-[#C0392B]/20 text-[#2C3E50]"
                     >
                       {highlight}
                     </Badge>
