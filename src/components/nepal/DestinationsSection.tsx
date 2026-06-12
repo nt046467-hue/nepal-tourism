@@ -11,11 +11,26 @@ import { DestinationDetailDialog } from "./DestinationDetailDialog";
 export default function DestinationsSection() {
   const [activeFilter, setActiveFilter] = useState<DestinationType>("All");
   const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
+  const [showAll, setShowAll] = useState(false);
 
   const filtered =
     activeFilter === "All"
       ? destinations
       : destinations.filter((d) => d.type === activeFilter);
+
+  const displayed = showAll ? filtered : filtered.slice(0, 8);
+
+  const handleViewAll = () => {
+    if (showAll) {
+      // Scroll back to top of destinations section
+      const el = document.querySelector("#destinations");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+      setActiveFilter("All");
+      setShowAll(false);
+    } else {
+      setShowAll(true);
+    }
+  };
 
   return (
     <section id="destinations" className="py-20 sm:py-28 bg-[#F9F7F4]">
@@ -51,7 +66,7 @@ export default function DestinationsSection() {
           {destinationTypes.map((type) => (
             <button
               key={type}
-              onClick={() => setActiveFilter(type)}
+              onClick={() => { setActiveFilter(type); setShowAll(false); }}
               className={`px-4 py-2 rounded-full font-[family-name:var(--font-space-grotesk)] text-sm font-medium transition-all duration-300 ${
                 activeFilter === type
                   ? "bg-[#C0392B] text-white shadow-md shadow-[#C0392B]/20"
@@ -65,7 +80,7 @@ export default function DestinationsSection() {
 
         {/* Destination Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filtered.map((destination, index) => (
+          {displayed.map((destination, index) => (
             <motion.div
               key={destination.slug}
               initial={{ opacity: 0, y: 30 }}
@@ -127,12 +142,13 @@ export default function DestinationsSection() {
           className="text-center mt-12"
         >
           <Button
+            onClick={handleViewAll}
             variant="outline"
             size="lg"
             className="border-[#C0392B] text-[#C0392B] hover:bg-[#C0392B] hover:text-white font-[family-name:var(--font-space-grotesk)] rounded-full px-8"
           >
-            View All Destinations
-            <ArrowRight className="ml-2 h-4 w-4" />
+            {showAll ? "Show Less" : "View All Destinations"}
+            <ArrowRight className={`ml-2 h-4 w-4 transition-transform ${showAll ? "rotate-180" : ""}`} />
           </Button>
         </motion.div>
       </div>

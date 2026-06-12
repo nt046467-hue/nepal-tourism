@@ -310,6 +310,9 @@ export default function ContactSection() {
                         </>
                       )}
                     </Button>
+                    <p className="text-xs text-muted-foreground mt-3 font-[family-name:var(--font-space-grotesk)]">
+                      🔒 Your inquiry is saved securely. Our team will respond within 24 hours via email.
+                    </p>
                   </form>
                 </Form>
               </div>

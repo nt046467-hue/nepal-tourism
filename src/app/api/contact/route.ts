@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { db } from "@/lib/db";
 
 export async function POST(request: Request) {
   try {
@@ -12,24 +13,44 @@ export async function POST(request: Request) {
       );
     }
 
-    // In production, this would save to a database or send an email
-    // For this demo, we just log it and return success
-    console.log("Contact form submission:", {
-      name,
-      email,
-      country,
-      tripType,
-      message,
-      timestamp: new Date().toISOString(),
+    // Save inquiry to database
+    const inquiry = await db.contactInquiry.create({
+      data: {
+        name,
+        email,
+        country,
+        tripType,
+        message,
+      },
     });
 
     return NextResponse.json(
-      { success: true, message: "Inquiry received successfully" },
+      {
+        success: true,
+        message: "Inquiry received successfully! Our team will contact you within 24 hours.",
+        id: inquiry.id,
+      },
       { status: 200 }
     );
-  } catch {
+  } catch (error) {
+    console.error("Contact form error:", error);
     return NextResponse.json(
       { error: "Failed to process inquiry" },
+      { status: 500 }
+    );
+  }
+}
+
+export async function GET() {
+  try {
+    const inquiries = await db.contactInquiry.findMany({
+      orderBy: { createdAt: "desc" },
+    });
+    return NextResponse.json({ inquiries }, { status: 200 });
+  } catch (error) {
+    console.error("Fetch inquiries error:", error);
+    return NextResponse.json(
+      { error: "Failed to fetch inquiries" },
       { status: 500 }
     );
   }

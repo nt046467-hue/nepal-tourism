@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { db } from "@/lib/db";
 
 export async function POST(request: Request) {
   try {
@@ -12,17 +13,19 @@ export async function POST(request: Request) {
       );
     }
 
-    // In production, this would save to a database or email service
-    console.log("Newsletter subscription:", {
-      email,
-      timestamp: new Date().toISOString(),
+    // Save to database (uses upsert to avoid duplicates)
+    await db.newsletterSubscription.upsert({
+      where: { email },
+      update: {},
+      create: { email },
     });
 
     return NextResponse.json(
-      { success: true, message: "Subscribed successfully" },
+      { success: true, message: "Subscribed successfully!" },
       { status: 200 }
     );
-  } catch {
+  } catch (error) {
+    console.error("Newsletter subscription error:", error);
     return NextResponse.json(
       { error: "Failed to subscribe" },
       { status: 500 }
