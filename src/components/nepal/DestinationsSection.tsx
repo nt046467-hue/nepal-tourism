@@ -18,7 +18,7 @@ export default function DestinationsSection() {
       ? destinations
       : destinations.filter((d) => d.type === activeFilter);
 
-  const displayed = showAll ? filtered : filtered.slice(0, 8);
+  const displayed = showAll ? filtered : filtered.slice(0, 4);
 
   const handleViewAll = () => {
     if (showAll) {

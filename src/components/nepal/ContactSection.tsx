@@ -161,7 +161,8 @@ export default function ContactSection() {
                   Message Sent!
                 </h3>
                 <p className="text-muted-foreground">
-                  Thank you for your inquiry. We&apos;ll get back to you within 24 hours.
+                  Your inquiry has been sent to our Nepal travel team at info@discovernepal.com.
+                  We&apos;ll respond within 24 hours via email.
                 </p>
               </motion.div>
             ) : (
@@ -311,7 +312,7 @@ export default function ContactSection() {
                       )}
                     </Button>
                     <p className="text-xs text-muted-foreground mt-3 font-[family-name:var(--font-space-grotesk)]">
-                      🔒 Your inquiry is saved securely. Our team will respond within 24 hours via email.
+                      🔒 Your inquiry is sent to our Nepal travel team at <strong>info@discovernepal.com</strong>. We respond within 24 hours.
                     </p>
                   </form>
                 </Form>
